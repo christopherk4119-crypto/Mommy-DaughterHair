@@ -13,7 +13,7 @@ export default function Header() {
     <header className="sticky top-0 left-0 right-0 z-50 bg-[var(--color-brand-cream)]/95 backdrop-blur-sm shadow-sm border-b border-[var(--color-brand-gold)]/40">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-18 sm:h-20">
-          <Link href="#hero" className="flex items-center gap-2.5 shrink-0">
+          <Link href="/" className="flex items-center gap-2.5 shrink-0">
             <div className="w-10 h-10 sm:w-11 sm:h-11 bg-gradient-to-br from-[var(--color-brand-plum)] to-[var(--color-brand-plum-light)] rounded-full flex items-center justify-center shadow-md">
               <Scissors className="text-[var(--color-brand-cream)] w-4 h-4 sm:w-5 sm:h-5" aria-hidden="true" />
             </div>
@@ -39,12 +39,12 @@ export default function Header() {
               <Phone className="w-4 h-4" aria-hidden="true" />
               {site.phone}
             </a>
-            <a
-              href="#booking"
+            <Link
+              href="/contact#booking"
               className="bg-[var(--color-brand-plum)] text-[var(--color-brand-cream)] px-6 py-3 rounded-full font-semibold text-sm uppercase tracking-wide hover:bg-[var(--color-brand-plum-light)] transition-colors shadow-md"
             >
               Book Now
-            </a>
+            </Link>
           </div>
 
           <div className="flex items-center gap-3 lg:hidden">
@@ -76,13 +76,13 @@ export default function Header() {
                 {item.label}
               </Link>
             ))}
-            <a
-              href="#booking"
+            <Link
+              href="/contact#booking"
               className="block text-center bg-[var(--color-brand-plum)] text-[var(--color-brand-cream)] px-6 py-3 rounded-full font-semibold mt-4 uppercase tracking-wide"
               onClick={() => setMobileOpen(false)}
             >
               Book Now
-            </a>
+            </Link>
           </div>
         </div>
       )}

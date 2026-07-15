@@ -1,21 +1,20 @@
 import Hero from "@/components/home/Hero";
-import Services from "@/components/home/Services";
+import ServicesTeaser from "@/components/home/ServicesTeaser";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
-import Gallery from "@/components/home/Gallery";
 import About from "@/components/home/About";
-import Booking from "@/components/home/Booking";
-import Contact from "@/components/home/Contact";
+import CtaBanner from "@/components/ui/CtaBanner";
 
 export default function HomePage() {
   return (
     <>
       <Hero />
-      <Services />
+      <ServicesTeaser />
       <WhyChooseUs />
-      <Gallery />
       <About />
-      <Booking />
-      <Contact />
+      <CtaBanner
+        title="Ready to Book Your Appointment?"
+        description="Whether it's braids, twists, protective styles, color, or a fresh cut — Rachel and the Mommy & Daughter Hair team are ready to help you love your hair."
+      />
     </>
   );
 }

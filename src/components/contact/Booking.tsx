@@ -1,6 +1,6 @@
 import { Phone, MapPin, Clock } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
-import BookingForm from "@/components/home/BookingForm";
+import BookingForm from "@/components/contact/BookingForm";
 import { site } from "@/data/site";
 
 export default function Booking() {

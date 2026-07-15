@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Phone, CalendarCheck, BadgeCheck, Crown, Users, User } from "lucide-react";
 import { site } from "@/data/site";
 
@@ -39,13 +40,13 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <a
-              href="#booking"
+            <Link
+              href="/contact#booking"
               className="inline-flex items-center justify-center gap-2 bg-[var(--color-brand-gold)] text-[var(--color-brand-charcoal)] px-8 py-4 rounded-full font-bold text-lg hover:opacity-90 transition-all shadow-xl"
             >
               <CalendarCheck className="w-5 h-5" aria-hidden="true" />
               Book Your Appointment
-            </a>
+            </Link>
             <a
               href={site.phoneHref}
               className="inline-flex items-center justify-center gap-2 bg-transparent text-[var(--color-brand-cream)] px-8 py-4 rounded-full font-semibold text-lg border-2 border-[var(--color-brand-cream)]/60 hover:bg-[var(--color-brand-cream)]/10 transition-all"
