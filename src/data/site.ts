@@ -5,8 +5,7 @@ export const site = {
   yearsExperience: "15+",
   phone: "403-612-2981",
   phoneHref: "tel:4036122981",
-  address: "71 Evansridge CT NW, Calgary, AB T3P 0N2",
-  addressMapQuery: "71 Evansridge CT NW, Calgary, AB T3P 0N2",
+  address: "Evanston, NW Calgary",
   neighbourhood: "Evanston, NW Calgary",
   serviceAreas: [
     "Evanston",

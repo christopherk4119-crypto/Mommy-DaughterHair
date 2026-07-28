@@ -54,7 +54,7 @@ export default function Footer() {
 
           <div>
             <h4 className="text-sm font-bold mb-5 text-[var(--color-brand-gold)] uppercase tracking-widest">
-              Visit Us
+              Find Us
             </h4>
             <a href={site.phoneHref} className="flex items-center gap-2 mb-3 text-[var(--color-brand-cream-dark)] hover:text-white transition-colors">
               <Phone className="w-4 h-4 shrink-0" aria-hidden="true" />

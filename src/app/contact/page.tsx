@@ -4,7 +4,7 @@ import Contact from "@/components/contact/Contact";
 
 const title = "Book an Appointment Calgary | Mommy & Daughter Hair";
 const description =
-  "Book braids, twists, coloring or styling with Rachel in NW Calgary. 71 Evansridge CT NW. Call or book online: 403-612-2981.";
+  "Book braids, twists, coloring or styling with Rachel in Evanston, NW Calgary. Call or book online: 403-612-2981.";
 
 export const metadata: Metadata = {
   title,
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
       {
         url: "/images/team/rachel-hair-stylist-calgary-mommy-daughter-hair.jpg",
         width: 442,
-        height: 960,
+        height: 912,
         alt: "Rachel, Calgary hair stylist and owner of Mommy & Daughter Hair",
       },
     ],

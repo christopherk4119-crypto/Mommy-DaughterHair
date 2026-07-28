@@ -66,10 +66,8 @@ const jsonLd = {
   priceRange: "$$",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "71 Evansridge CT NW",
     addressLocality: "Calgary",
     addressRegion: "AB",
-    postalCode: "T3P 0N2",
     addressCountry: "CA",
   },
   geo: {

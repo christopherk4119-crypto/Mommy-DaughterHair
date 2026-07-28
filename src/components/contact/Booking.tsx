@@ -38,7 +38,7 @@ export default function Booking() {
                 <MapPin className="w-5 h-5 text-[var(--color-brand-plum)]" aria-hidden="true" />
               </div>
               <div>
-                <div className="text-sm text-[var(--color-brand-charcoal)]/60">Visit us</div>
+                <div className="text-sm text-[var(--color-brand-charcoal)]/60">Location</div>
                 <div className="font-heading text-lg font-bold text-[var(--color-brand-charcoal)]">{site.address}</div>
               </div>
             </div>
