@@ -1,4 +1,4 @@
-import { UserRound } from "lucide-react";
+import Image from "next/image";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { site } from "@/data/site";
 
@@ -9,15 +9,20 @@ export default function About() {
         <SectionHeading eyebrow="Meet Rachel" title="Meet Rachel" />
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Placeholder for Rachel's photo — replace with a real photo at
-              /public/images/gallery/rachel.jpg and swap this div for an <Image> */}
           <div className="order-1 lg:order-none">
-            <div className="aspect-[4/5] max-w-sm mx-auto rounded-2xl bg-[var(--color-brand-cream-dark)] border-2 border-dashed border-[var(--color-brand-gold)] flex flex-col items-center justify-center gap-3">
-              <UserRound className="w-14 h-14 text-[var(--color-brand-caramel)]/60" aria-hidden="true" />
-              <span className="text-sm font-semibold uppercase tracking-wide text-[var(--color-brand-caramel-dark)]/70">
-                Add Rachel Photo
-              </span>
+            <div className="relative aspect-[4/5] max-w-sm mx-auto rounded-2xl overflow-hidden shadow-lg">
+              <Image
+                src="/images/team/rachel-hair-stylist-calgary-mommy-daughter-hair.jpg"
+                alt="Rachel, Calgary hair stylist and owner of Mommy & Daughter Hair"
+                fill
+                sizes="(max-width: 1024px) 384px, 400px"
+                className="object-cover"
+                priority
+              />
             </div>
+            <p className="text-center text-sm text-[var(--color-brand-charcoal)]/60 mt-3 font-medium">
+              Rachel — Hair Stylist
+            </p>
           </div>
 
           <div>

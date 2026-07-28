@@ -40,14 +40,25 @@ start receiving booking requests by email.
 
 ## Photos
 
-The gallery and "Meet Rachel" section currently use labeled "Add Photo" placeholder tiles — no
-stock photos were used. To add real photos:
+Real photos live in `public/images/gallery/` (4 real work photos) and `public/images/team/`
+(Rachel's photo, used on the About/Meet Rachel section). The gallery still has 8 labeled
+"Add Photo" placeholder tiles — no stock photos were used to fill them.
 
-1. Drop image files into `public/images/gallery/`
-2. In `src/components/gallery/GalleryGrid.tsx` (used on `/gallery`), replace the placeholder tile
-   markup with `next/image` `<Image>` components pointing at the new files
-3. In `src/components/home/About.tsx`, replace the placeholder div with Rachel's photo
-4. In `src/components/home/Hero.tsx`, replace the gradient background with a hero photo
+To add more real photos:
+
+1. Drop the image file into `public/images/gallery/`, named
+   `calgary-[service]-[description]-[number].jpg`
+2. Add an entry to `src/data/gallery.ts` with `src`, descriptive `alt` text (mentioning Calgary +
+   the specific service), and a `category` — `GalleryGrid.tsx` automatically renders a real
+   `next/image` for any entry with `src`, or an "Add Photo" placeholder if `src` is omitted
+3. In `src/components/home/Hero.tsx`, replace the gradient background with a hero photo if a
+   landscape-oriented one becomes available (the current uploads are portrait/phone screenshots,
+   not ideal for a wide hero banner)
+
+Note: `calgary-african-hair-stylist-braid-style-inspiration-collage-1.jpg` and
+`calgary-african-hair-stylist-curly-braid-styling-1.jpg` contain visible third-party watermarks
+("Eleeji.com" and a TikTok "@braids.m" handle respectively) — they were included at the client's
+explicit request, but are not confirmed to be Rachel's own work.
 
 ## Deploying
 

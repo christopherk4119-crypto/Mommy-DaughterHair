@@ -8,6 +8,7 @@ export default function Booking() {
     <section id="booking" className="bg-[var(--color-brand-cream-dark)] py-20 sm:py-24 scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
+          as="h1"
           eyebrow="Book Now"
           title="Ready to Book Your Appointment?"
           description="Fill out the form below or call us directly — we can't wait to help you love your hair."

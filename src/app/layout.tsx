@@ -17,27 +17,39 @@ const inter = Inter({
   weight: ["300", "400", "500", "600", "700"],
 });
 
-const BASE_URL = "https://www.mommyanddaughterhair.ca";
+export const BASE_URL = "https://www.mommyanddaughterhair.ca";
+
+const homeTitle = "African & Textured Hair Salon Calgary | Mommy & Daughter Hair";
+const homeDescription =
+  "Calgary's trusted African & textured hair salon — braids, twists, protective styles, coloring & more with Rachel, 15+ years experience. Call 403-612-2981.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
-  title: "Mommy & Daughter Hair | African & Textured Hair Salon Calgary | Braids, Twists & Styling",
-  description:
-    "Calgary's trusted African and textured hair salon. Braids, twists, protective styles, coloring, and formal styling by Rachel — 15+ years experience. All hair types welcome. Book: 403-612-2981.",
+  title: homeTitle,
+  description: homeDescription,
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "Mommy & Daughter Hair | African & Textured Hair Salon Calgary | Braids, Twists & Styling",
-    description:
-      "Calgary's trusted African and textured hair salon. Braids, twists, protective styles, coloring, and formal styling by Rachel — 15+ years experience. All hair types welcome. Book: 403-612-2981.",
+    title: homeTitle,
+    description: homeDescription,
     url: BASE_URL,
     siteName: site.name,
     locale: "en_CA",
     type: "website",
+    images: [
+      {
+        url: "/images/gallery/calgary-african-hair-stylist-braided-bun-updo-1.jpg",
+        width: 736,
+        height: 860,
+        alt: "Braided bun updo protective style by Calgary African hair stylist",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mommy & Daughter Hair | African & Textured Hair Salon Calgary",
-    description:
-      "Braids, twists, protective styles, coloring, and formal styling by Rachel — 15+ years experience. All hair types welcome.",
+    title: homeTitle,
+    description: homeDescription,
   },
 };
 
@@ -45,7 +57,11 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "HairSalon",
   name: site.name,
-  image: `${BASE_URL}/images/gallery/hero.jpg`,
+  image: [
+    `${BASE_URL}/images/gallery/calgary-african-hair-stylist-braided-bun-updo-1.jpg`,
+    `${BASE_URL}/images/gallery/calgary-african-hair-stylist-cornrow-braid-closeup-1.jpg`,
+    `${BASE_URL}/images/team/rachel-hair-stylist-calgary-mommy-daughter-hair.jpg`,
+  ],
   telephone: site.phone,
   priceRange: "$$",
   address: {
@@ -80,7 +96,7 @@ const jsonLd = {
     "@type": "Person",
     name: site.founder,
   },
-  areaServed: "Calgary, AB",
+  areaServed: [{ "@type": "City", name: "Calgary" }, ...site.serviceAreas.map((area) => ({ "@type": "Place", name: area }))],
 };
 
 export default function RootLayout({

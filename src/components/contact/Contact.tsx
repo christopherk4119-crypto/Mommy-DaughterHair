@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Phone, MapPin, Clock } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { InstagramIcon, FacebookIcon } from "@/components/ui/SocialIcons";
@@ -12,7 +13,7 @@ export default function Contact() {
         <SectionHeading
           eyebrow="Contact"
           title="Visit Our Salon in NW Calgary"
-          description="Conveniently located in Evanston, NW Calgary — easy to find, easy to love."
+          description={`Conveniently located in Evanston, NW Calgary — easy to find for clients across ${site.serviceAreas.slice(0, 4).join(", ")}, and nearby ${site.serviceAreas[site.serviceAreas.length - 1]}.`}
         />
 
         <div className="grid lg:grid-cols-2 gap-10 items-stretch">
@@ -92,6 +93,18 @@ export default function Contact() {
                 TT
               </a>
             </div>
+
+            <p className="text-[var(--color-brand-charcoal)]/70 pt-2">
+              New here?{" "}
+              <Link href="/services" className="text-[var(--color-brand-plum)] font-semibold hover:underline">
+                Browse our services
+              </Link>{" "}
+              or{" "}
+              <Link href="/gallery" className="text-[var(--color-brand-plum)] font-semibold hover:underline">
+                see our gallery
+              </Link>{" "}
+              before you book.
+            </p>
           </div>
         </div>
       </div>

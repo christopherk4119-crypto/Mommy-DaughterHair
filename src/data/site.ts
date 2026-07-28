@@ -8,6 +8,16 @@ export const site = {
   address: "71 Evansridge CT NW, Calgary, AB T3P 0N2",
   addressMapQuery: "71 Evansridge CT NW, Calgary, AB T3P 0N2",
   neighbourhood: "Evanston, NW Calgary",
+  serviceAreas: [
+    "Evanston",
+    "Sage Hill",
+    "Sherwood",
+    "Panorama Hills",
+    "Symons Valley",
+    "Carrington",
+    "Kincora",
+    "Airdrie",
+  ],
   hours: [
     { days: "Tuesday – Friday", time: "9:00 AM – 7:00 PM" },
     { days: "Saturday – Sunday", time: "10:00 AM – 7:00 PM" },
