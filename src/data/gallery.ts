@@ -1,12 +1,11 @@
 export type GalleryImage = {
-  src?: string;
+  src: string;
   alt: string;
   category: string;
 };
 
-// Real photos live in /public/images/gallery/. Entries without `src` are
-// placeholder slots — replace by adding a photo to that folder and setting
-// `src` (GalleryGrid.tsx renders a real <Image> whenever src is present).
+// Real photos live in /public/images/gallery/. Add more entries here as more
+// photos come in — GalleryGrid.tsx renders one real <Image> per entry.
 export const galleryImages: GalleryImage[] = [
   {
     src: "/images/gallery/calgary-african-hair-stylist-cornrow-braid-closeup-1.jpg",
@@ -28,12 +27,4 @@ export const galleryImages: GalleryImage[] = [
     alt: "African braid style collection by Calgary hair stylist Rachel",
     category: "Braids",
   },
-  { alt: "Men's twist style by Rachel in Calgary", category: "Men's Twists" },
-  { alt: "Natural hair texturing result at Calgary hair salon", category: "Texturing" },
-  { alt: "Vibrant hair coloring by Mommy & Daughter Hair Calgary", category: "Coloring" },
-  { alt: "Dimensional highlights styled in Calgary", category: "Highlights" },
-  { alt: "Women's twist style for textured hair in Calgary", category: "Twists" },
-  { alt: "Formal updo styling for a Calgary event", category: "Formal Styling" },
-  { alt: "Scalp treatment and healthy hair care in Calgary", category: "Scalp Treatments" },
-  { alt: "Kids protective braided style at Calgary salon", category: "Braids" },
 ];

@@ -16,7 +16,7 @@ export default function About() {
                 alt="Rachel, Calgary hair stylist and owner of Mommy & Daughter Hair"
                 fill
                 sizes="(max-width: 1024px) 384px, 400px"
-                className="object-cover"
+                className="object-cover object-top"
                 priority
               />
             </div>
